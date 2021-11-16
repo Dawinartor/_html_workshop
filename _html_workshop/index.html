@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Meaningful Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="author" content="John Doe">
+    <meta http-equiv="refresh" content="30">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <form action="/geT.html" method="get" >
+        <label for="fname">Write "GET"</label><br>
+        <input type="text" id="fname1" name="fname" value=""><br>
+        <label for="lname">Write "GET"</label><br>
+        <input type="text" id="lname2" name="lname" value=""><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+
+    <br><br><br><br><br><br>
+
+    <form action="/posT.html" method="post" >
+        <label for="fname">Write "POST"</label><br>
+        <input type="text" id="fname11" name="fname" value=""><br>
+        <label for="lname">Write "POST"</label><br>
+        <input type="text" id="lname22" name="lname" value=""><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+
+    <br><br><br><br><br><br>
+
+    <iframe width="400" height="400"
+        src="https://www.youtube.com/watch?v=tSJSVmfaMCs">
+    </iframe>
+
+    <div>
+        <button onclick="getLocation()">Try It</button>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        }
+
+        // Find code example with HTML Drag and Drop on the Web:
+            // https://www.w3schools.com/html/html5_draganddrop.asp
+    </script>
+
+
+</body>
+</html>

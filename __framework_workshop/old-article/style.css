@@ -1,0 +1,31 @@
+html {
+    background-color:bisque;
+    color: black;
+    margin: 0;
+}
+
+.Article-Container {
+    margin: 5px;
+}
+
+.Article {
+    margin: 15px;
+    border-left: 3px solid rgb(76, 25, 194);
+    background-color: rgb(240, 255, 252);
+}
+
+.Bolder {
+    font-weight: bolder;
+}
+
+.Italic {
+    font-style: italic;
+}
+
+.Bold {
+    font-weight: bold;
+}
+
+.Title {
+    text-align: center;
+}

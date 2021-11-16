@@ -1,0 +1,45 @@
+html {
+    background-color:bisque;
+    margin: 0;
+}
+
+#subscribe-button {
+    background-color:blue;
+}
+
+.Article-Container {
+    margin: 5px;
+}
+
+.Article {
+    margin: 15px;
+    border-left: 3px solid rgb(76, 25, 194);
+    background-color: rgb(240, 255, 252);
+}
+
+ .Article-Container button {
+    margin-left: 15px;
+    background-color: rgb(16, 40, 255);
+
+}
+
+.Bolder {
+    font-weight: bolder;
+}
+
+.Italic {
+    font-style: italic;
+}
+
+.Bold {
+    font-weight: bold;
+}
+
+.Title {
+    text-align: center;
+}
+
+#myImage {
+    width: 150px;
+    height: 150px;
+}

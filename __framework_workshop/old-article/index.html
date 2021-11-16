@@ -1,0 +1,314 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>__CSS_Workshop</title>
+  <meta name="description" content="What is Sass?">
+  <meta name="Tammy Coron" content="SitePoint">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <article class="Article-Container">
+      <p class="Bolder Italic" id="disclaimer"> Disclaimer: this is TSI University task for HTML, CSS and SASS workshop, not for publishing anywhere on the media. Please include this disclaimer </p>
+      <h1 class="Bold Title"> What is Sass? Your guide to this top CSS preprocessor</h1>
+      <p class="Italic" id="author"> By Tammy Coron January 10, 2020 </p>
+
+      <article class="Article" id="article-1">
+        <h1 class="Bold Title">Discover what Sass is, and learn how to start using it. </h1>
+        <p class="Italic Bolder">
+          What is Sass? That's the question we here to answer. If you're new to web design, you've probably heard the term floating around, 
+          but you might not be quite up to speed with exactly what Sass is, what is does, and whether or not you should be using it.
+          In short, Sass is a CSS preprocessor, which adds special features such as variables, nested rules and mixins (sometimes referred to as syntactic sugar) into regular CSS. 
+          The aim is to make the coding process simpler and more efficient. Let's explore in more detail.  
+        </p>
+        <p class="Italic Bolder">
+          Article source: https://www.creativebloq.com/web-design/what-is-sass-111517618
+        </p>
+      </article>
+
+      <article class="Article" id="article-2">
+        <h2 class="Bold"> What is a CSS preprocessor? </h2>
+        <p class="post-meta">
+          A CSS preprocessor is a scripting language that extends CSS by allowing developers to write code in one language and then compile it into CSS.
+          Sass is perhaps the most popular preprocessor around right now, but other well-known examples include Less and Stylus. 
+        </p>
+        <p class="post-meta">
+          Before we go any further, a quick public service announcement is in order:
+          most web designers would say that if you're new to CSS, you're better off avoiding Sass (or any preprocessors, extensions or frameworks) while you're still learning.
+          While it's true they offer many advantages in speed and efficiency, it's important that you really get to grips with the basics of CSS.
+          Make sure you learn the core concepts before you start exploring shortcuts and confusing things.  
+        </p>
+      </article>
+
+      <article class="Article" id="article-3">
+        <h2>What is Sass?</h2>
+        <p class="post-meta">
+          Sass is arguably the most useful of all CSS extensions 
+        </p>
+        <p class="post-meta">
+          Sass (which stands for 'Syntactically awesome style sheets) is an extension of CSS that enables you to use things like variables, nested rules,
+          inline imports and more. It also helps to keep things organised and allows you to create style sheets faster. 
+        </p>
+        <p class="post-meta">
+          Sass is compatible with all versions of CSS. The only requirement for using it is that you must have Ruby installed.
+          Users are also asked to follow the Sass Community Guidelines. 
+          <br>
+          How to use Sass
+        </p>
+        <p class="post-meta">
+          In the following section, we'll outline some basic tips for using Sass, using examples from the official Sass website.
+          Take a look at the Sass Documentation for additional references and examples. 
+        </p>
+      </article>
+
+      <article class="Article" id="article-4">
+        <h2 class="Bold">Syntax</h2> 
+        <p class="Bold"> Sass includes two syntax options: </p>
+        <ul>
+          <li>
+            <p>
+              SCSS (Sassy CSS): Uses the .scss file extension and is fully compliant with CSS syntax 
+            </p>
+          </li>
+          <li>
+            <p>
+              Indented (simply called 'Sass'): Uses .sass file extension and indentation rather than brackets; it is not fully compliant with CSS syntax, but it's quicker to write 
+            </p>
+          </li>
+        </ul>
+        <p class="Italic">Note that files can be converted from one syntax to the other using the sass-convert command. </p>
+      </article>
+
+      <article class="Article" id="article-5">
+        <h2> Variables </h2>
+        <p>
+          Just like other programming languages, Sass allows the use of variables that can store information
+          you can use throughout your style sheet. For example, you can store a colour value in a variable
+          at the top of the file, and then use this variable when setting the colour of your elements. 
+          This enables you to quickly change your colours without having to modify each line separately. 
+        </p>
+        <p class="Bold"> 
+          For example:
+        </p>
+        <code>
+          $font-stack:    Helvetica, sans-serif; 
+          <br>
+          $primary-color: #333; 
+          <br><br>
+          body { 
+            <br>
+            &nbsp font: 100% $font-stack; <br>
+            &nbsp color: $primary-color; <br>
+          } 
+          <br><br>
+          The following CSS will be produced: 
+          <br><br>
+          body { 
+            <br>
+            &nbsp font: 100% Helvetica, sans-serif; 
+            <br>
+            &nbsp color: #333; <br> 
+          } <br>
+        </code>
+      </article>
+
+    <article class="Article" id="article-6">
+      <h2> Nesting </h2>
+      <p>
+        Nesting is a double-edged sword. While it provides an excellent method for reducing the
+        amount of code you need to write, it can also lead to over-qualified CSS if not executed
+        carefully. The idea is to nest your CSS selectors in such a way as to mimic your HTML hierarchy. 
+      </p>
+      <p>
+        The following shows a basic navigation style that uses nesting: 
+      </p>
+      <code>
+        nav { <br>
+        &nbsp ul { 
+          <br>
+          &nbsp &nbsp margin: 0; <br>
+          &nbsp &nbsp padding: 0;  <br>
+          &nbsp &nbsp list-style: none; <br>
+          &nbsp } <br> 
+          <br>
+          &nbsp li { display: inline-block; } <br>
+          <br>
+        
+          &nbsp a { 
+            <br>
+            &nbsp &nbsp display: block; <br>
+            &nbsp &nbsp padding: 6px 12px; <br>
+            &nbsp &nbsp text-decoration: none; <br>
+            &nbsp } <br>
+        } <br>
+        <br>
+        <P class="Bold">The CSS output is as follows:</P>
+        <br>
+
+        nav ul { 
+          <br>
+          &nbsp margin: 0; <br>
+          &nbsp padding: 0; <br>
+          &nbsp list-style: none; <br> 
+        } <br>
+        <br>
+        
+        nav li { 
+          <br>
+          &nbsp display: inline-block; <br>
+        } <br><br>
+
+        nav a { <br> 
+          &nbsp display: block; <br>
+          &nbsp padding: 6px 12px; <br>
+          &nbsp text-decoration: none; <br>
+        } <br>
+      </code>
+    </article>
+
+    <article class="Article" id="article-7">
+      <h2> Partials </h2>
+      <p>
+        Partials are smaller Sass files that can be imported (see next section) into other Sass files.
+        Think of partials as code snippets. With these code snippets, your CSS can now be modular and
+        easier to maintain. A partial is designated as such by naming it with a leading underscore: _partial.scss.
+        <br>
+        Import 
+        <br><br>
+        Used with Partials (see previous section), the @import directive allows you to 
+        import your partial files into the current file, to build one single CSS file. 
+        Be mindful of how many imports you're using as an HTTP request will be generated for each one. 
+        <br><br>
+        // _reset.scss 
+        <br>
+      </p>
+      <code>
+        html, <br>
+        body, <br>
+        ul, <br>
+        ol { 
+          <br>
+          &nbsp margin: 0; <br>
+          &nbsp padding: 0; <br>
+        } 
+        <br><br>
+        // basefile.scss 
+        <br><br>
+        @import 'reset'; <br><br>
+        body {
+          <br> 
+          &nbsp font: 100% Helvetica, sans-serif; <br>
+          &nbsp background-color: #efefef; <br>
+        } 
+        <br><br>
+        And the corresponding CSS output: 
+        <br><br>
+        html, body, ul, ol { 
+          <br>
+          &nbsp margin: 0; <br>
+          &nbsp padding: 0; <br>
+        }
+        <br><br>
+        body { 
+          <br>
+          &nbsp font: 100% Helvetica, sans-serif; <br>
+          &nbsp background-color: #efefef; <br>
+        } 
+        <br><br>
+        <p class="Bold Italic">
+          Note: When importing partials, you don't need to include the file extension or the underscore. 
+        </p>
+      </code>
+    </article>
+
+    <article class="Article" id="article-8">
+      <h2>
+        Mixins 
+      </h2>
+      <p class="Bold">
+        One of the advantages of using preprocessors is their ability to take complex, 
+        long-winded code and simplify it. This is where mixins come in handy!  
+      </p>
+      <p>
+        For example, if you need to include the vendor prefixes, you can use a mixin instead.
+        Take a look at this example for border-radius: 
+      </p>
+      <code>
+        @mixin border-radius($radius) { <br>
+          &nbsp -webkit-border-radius: $radius; <br>
+          &nbsp -moz-border-radius: $radius; <br>
+          &nbsp -ms-border-radius: $radius; <br>
+          &nbsp border-radius: $radius; <br>
+        } 
+        <br><br>
+        .box { @include border-radius(10px); } 
+      </code>
+      <p>
+        Notice the @mixin directive at the top. It has been given the name border-radius and uses the
+        variable $radius as its parameter. This variable is used to set the radius value for each element.
+      </p>
+      <p>
+        Later, the @include directive is called, along with the mixin name (border-radius) and a
+        parameter (10px). Thus .box { @include border-radius(10px); }. 
+      </p>  
+        <p class="Bold">The following CSS is produced:</p>
+      
+      <code>
+        .box {
+          <br> 
+          &nbsp -webkit-border-radius: 10px; <br>
+          &nbsp -moz-border-radius: 10px; <br>
+          &nbsp -ms-border-radius: 10px; <br>
+          &nbsp border-radius: 10px; <br>
+        } <br>
+      </code> 
+    </article>
+
+    <article class="Article" id="article-9">
+      <h2>
+        Extend/Inheritance 
+      </h2>
+      <p>
+        The @extend directive has been called one of Sass' most powerful features.
+        After seeing it in action, it's clear why. 
+      </p>
+      <p>
+        The idea is that with this directive you won't have to include multiple class names on your
+        HTML elements and can keep your code DRY (don't repeat yourself). Your selectors can inherit
+        the styles of other selectors, and then be easily extended when required. Now that's powerful.
+        Operators 
+      </p>
+      <p>
+        Having the ability to perform calculations in your CSS allows you to do more, like convert pixel
+        values into percentages. You'll have access to standard maths functions like addition, subtraction,
+        multiplication and division. Of course, these functions can be combined to create complex calculations.
+      </p>
+      <p>
+        In addition, Sass includes a few built-in functions to help manipulate numbers.
+        Functions like percentage(), floor() and round() to name a few. 
+      </p>
+    </article>
+
+    <article class="Article" id="article-10">
+      <h2>
+        &nbsp Tammy Coron 
+      </h2>
+      <p class="Bold">
+        Tammy is an independent creative professional and the host of Roundabout: Creative Chaos.
+        She’s also the owner of Just Write Code, an independent production company located
+        in West Tennessee. For more information about Tammy, visit her website by clicking the icons above.  
+      </p>
+    </article>
+
+  </article>
+ 
+</body>
+</html>
