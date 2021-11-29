@@ -1,7 +1,4 @@
 <html>
-<head>
-
-</head>
 <body>
 
 <form action="welcome.php" method="post">
