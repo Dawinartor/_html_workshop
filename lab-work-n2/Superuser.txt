@@ -1,2 +1,3 @@
-Username: Super@user.com
-Passwort: Super
+# Start server: python3 manage.py runserver
+# Activate venv: source myenv/bin/activate
+# Superuser: Username: Super@user.com / Passwort: Super
