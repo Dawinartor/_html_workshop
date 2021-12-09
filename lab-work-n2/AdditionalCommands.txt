@@ -1,0 +1,6 @@
+# Start server: python3 manage.py runserver
+# Create superuser: python3 manage.py createsuperuser
+# Activate venv: source myenv/bin/activate
+Username: Super@user.com / Passwort: Super
+# Set temporary PYTHONPATH: 
+ # -> export PYTHONPATH=/home/humanslave/GitHub/TSI-Modules/web-application-development-tools/_html_workshop/lab-work-n2/djangoLogin/bin/python
